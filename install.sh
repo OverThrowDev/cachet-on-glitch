@@ -1,5 +1,13 @@
+echo "Starting install"
+
+chmod +x .mysql/run-mysqld.sh
+.mysql/run-mysqld.sh &
+
+echo "Started MySQL"
+
 if [ ! -d "/app/Cachet" ]; then
 
+echo "Cloning Cachet"
 # Clone Cachet
 git clone -b v2.3.18 --single-branch https://github.com/cachethq/Cachet.git
 cd Cachet/
@@ -45,12 +53,15 @@ composer install --no-dev -o
 php artisan key:generate
 php artisan app:install
 
+cd /app
+
 # Add .gitignore for Cachet/ so the editor doesn't freeze
 if [ ! -f "/app/.gitignore" ]; then
 cat > .gitignore <<EOF
 Cachet/
 EOF
 
-fi
-fi
+chmod +x .apache2/run-apache2.sh
 
+fi
+fi

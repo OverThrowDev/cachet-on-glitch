@@ -62,6 +62,12 @@ Cachet/
 EOF
 
 chmod +x .apache2/run-apache2.sh
+echo "Starting apache2..."
+.apache2/run-apache2.sh &
+echo "Started apache2"
+
+echo "Waiting 5 seconds for things to update..."
+sleep 5
 
 echo "Done installing. Refreshing..."
 # Refresh the app so everything updates

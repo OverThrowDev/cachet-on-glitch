@@ -63,9 +63,8 @@ EOF
 
 chmod +x .apache2/run-apache2.sh
 
-#echo "Done installing. Refreshing..."
-# Refresh the app so everything updates
-#curl -s -X POST http://localhost:1083/refresh
+echo "Done installing. Refreshing in 5 seconds..."
+sh postinstall.sh &
 
 fi
 fi

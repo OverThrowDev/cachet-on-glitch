@@ -67,7 +67,7 @@ echo "Starting apache2..."
 echo "Started apache2"
 
 echo "Waiting 5 seconds for things to update..."
-sleep 5
+sleep 20
 
 echo "Done installing. Refreshing..."
 # Refresh the app so everything updates

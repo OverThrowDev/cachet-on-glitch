@@ -1,4 +1,4 @@
 {
-  "install": "echo 'No install needed'",
+  "install": "sh install.sh",
   "start": "bash lamp-start.sh"
 }

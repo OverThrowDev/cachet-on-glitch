@@ -18,7 +18,7 @@ cat > .env <<EOF
 APP_ENV=production
 APP_DEBUG=false
 APP_URL=https://${PROJECT_NAME}.glitch.me
-APP_KEY=
+APP_KEY=${PROJECT_ID}
 
 DB_DRIVER=mysql
 DB_HOST=localhost

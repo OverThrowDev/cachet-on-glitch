@@ -63,8 +63,9 @@ EOF
 
 chmod +x .apache2/run-apache2.sh
 
+touch postinstall
+
 echo "Done installing. Refreshing in 5 seconds..."
-sh postinstall.sh &
 
 fi
 fi

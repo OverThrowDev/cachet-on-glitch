@@ -1,4 +1,4 @@
 {
   "install": "sh install.sh",
-  "start": "bash lamp-start.sh"
+  "start": "sh pre-start.sh && bash lamp-start.sh"
 }

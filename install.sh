@@ -1,11 +1,11 @@
-echo "Starting install"
+if [ ! -d "/app/Cachet" ]; then
+
+echo "Now installing Cachet..."
 
 chmod +x .mysql/run-mysqld.sh
 .mysql/run-mysqld.sh &
 
 echo "Started MySQL"
-
-if [ ! -d "/app/Cachet" ]; then
 
 echo "Cloning Cachet"
 # Clone Cachet
@@ -62,6 +62,10 @@ Cachet/
 EOF
 
 chmod +x .apache2/run-apache2.sh
+
+echo "Done installing. Refreshing..."
+# Refresh the app so everything updates
+curl -s -X POST http://localhost:1083/refresh
 
 fi
 fi

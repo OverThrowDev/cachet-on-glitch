@@ -1,7 +1,7 @@
 if [ ! -d "/app/Cachet" ]; then
 
 # Clone Cachet
-git clone -b 2.4 --single-branch https://github.com/cachethq/Cachet.git
+git clone -b v2.3.18 --single-branch https://github.com/cachethq/Cachet.git
 cd Cachet/
 rm -rf .git/
 
